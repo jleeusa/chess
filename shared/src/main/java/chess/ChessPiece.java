@@ -1,6 +1,7 @@
 package chess;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Represents a single chess piece
@@ -39,6 +40,16 @@ public class ChessPiece {
         throw new RuntimeException("Not implemented");
     }
 
+    public interface PieceMovesCalculator {
+        public class KingMovesCalculator {
+
+        }
+        public class RookMovesCalculator {
+
+        }
+
+    }
+
     /**
      * Calculates all the positions a chess piece can move to
      * Does not take into account moves that are illegal due to leaving the king in
@@ -47,6 +58,6 @@ public class ChessPiece {
      * @return Collection of valid moves
      */
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
-        throw new RuntimeException("Not implemented");
+        return List.of();
     }
 }
